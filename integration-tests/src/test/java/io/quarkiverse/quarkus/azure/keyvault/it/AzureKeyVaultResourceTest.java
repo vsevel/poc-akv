@@ -1,4 +1,4 @@
-package io.quarkiverse.quarkus.azure.key.vault.it;
+package io.quarkiverse.quarkus.azure.keyvault.it;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
@@ -16,6 +16,6 @@ public class AzureKeyVaultResourceTest {
                 .when().get("/azure-key-vault")
                 .then()
                 .statusCode(200)
-                .body(is("Hello azure-key-vault coucou=Passw0rd@Thu Apr 22 19:38:44 CEST 2021 titi=defaulttiti"));
+                .body(is("Hello azure-key-vault foo=s3cr3t bar=missing"));
     }
 }

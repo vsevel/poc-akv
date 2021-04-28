@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.quarkiverse.quarkus.azure.key.vault.it;
+package io.quarkiverse.quarkus.azure.keyvault.it;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.GET;
@@ -26,14 +26,14 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @ApplicationScoped
 public class AzureKeyVaultResource {
 
-    @ConfigProperty(name = "coucou")
-    String coucouValue;
+    @ConfigProperty(name = "myprops.foo")
+    String foo;
 
-    @ConfigProperty(name = "titi", defaultValue = "defaulttiti")
-    String titiValue;
+    @ConfigProperty(name = "bar", defaultValue = "missing")
+    String bar;
 
     @GET
     public String hello() {
-        return "Hello azure-key-vault coucou=" + coucouValue + " titi=" + titiValue;
+        return "Hello azure-key-vault foo=" + foo + " bar=" + bar;
     }
 }
