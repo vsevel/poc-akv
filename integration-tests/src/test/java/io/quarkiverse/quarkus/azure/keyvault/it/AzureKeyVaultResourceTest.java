@@ -1,4 +1,4 @@
-package io.quarkiverse.quarkus.azure.key.vault.it;
+package io.quarkiverse.quarkus.azure.keyvault.it;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
