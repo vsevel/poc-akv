@@ -1,0 +1,5 @@
+name: quarkus-azure-key-vault
+title: Quarkus - Azure Key Vault
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
